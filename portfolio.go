@@ -42,7 +42,7 @@ func main() {
 
 	http.HandleFunc("/", rootHandler)
 	http.HandleFunc("/projects/", projHandler)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8000", nil)
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
