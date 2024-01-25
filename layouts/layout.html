@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{.Description}}" />
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+    <title>Joseph Zebede: {{toTitle .Title}}</title>
+</head>
+
+<body>
+    <h1>{{toTitle .Title}}</h1>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="javascript:history.back()">Back</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    {{template "projNav" .}} {{template "code" .}}
+</body>
+
+</html>

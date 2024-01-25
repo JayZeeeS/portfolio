@@ -1,0 +1,154 @@
+body {
+    font-size: 100%;
+    background-color: #232531;
+    color: #cbccc9;
+    padding: 10px;
+    margin-inline: 5rem;
+    border: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "title title"
+        "site-nav site-nav"
+        "sidebar code"
+        "footer footer";
+    grid-template-columns: 15%;
+    align-items: center;
+    justify-items: center;
+}
+
+a:link {}
+
+a:visited {}
+
+a:hover {}
+
+h1 {
+    font-size: 4rem;
+    grid-area: title;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+pre {}
+
+.code {}
+
+.code-wrapper {
+    font-size: 1rem;
+    grid-area: code;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.site-nav {
+    justify-self: center;
+    grid-area: site-nav;    
+    width: 100%;
+}
+
+.site-nav ul {
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.site-nav li {
+    border-inline: ridge 1px;
+}
+
+.site-nav a {
+    color: #cbccc9;
+    text-decoration: none;
+}
+
+.project-nav {
+    display: flex;
+    width: 100%;
+    align-self: start;
+    justify-self: center;
+    grid-area: sidebar;
+}
+
+.project-nav nav {
+    flex: 1;
+    border-top: none;
+    border-bottom: none;
+    border-inline: ridge 1px;
+}
+
+.project-nav ul {
+    justify-content: center;
+    padding: 0;
+}
+.project-nav li {
+    list-style: none;
+}
+
+.project-nav a {
+    color: #cbccc9;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 2000px) {
+    .code-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    body {
+        margin: 0;
+        padding: 0;
+        grid-template-areas:
+            "title"
+            "site-nav"
+            "sidebar"
+            "code"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {}
+
+    h3 {}
+
+    .code-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project-nav nav {
+        border-top: ridge 1px;
+        border-bottom: ridge 1px;
+    }
+
+    .project-nav div {}
+
+    .project-nav nav {}
+
+    .project-nav ul {}
+
+    .project-nav li {}
+}
+
+.chroma {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+

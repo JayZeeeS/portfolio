@@ -1,0 +1,10 @@
+{{ define "code" }}
+
+<div class="code-wrapper">
+  {{range .Body}}
+  <div class="code">
+  <h2>{{.Filename}}</h2>
+        {{.Content | safeHTML}}</div>
+{{ end }}
+</div>
+{{ end }}

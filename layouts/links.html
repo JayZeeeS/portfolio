@@ -1,0 +1,12 @@
+{{ define "projNav" }}
+<div class="project-nav">
+  <nav>
+    <ul>
+            <li><a href="/">Home</a></li>
+      {{range .Links}}
+          <li><a href="{{.URL}}">{{toTitle .Text}}</a></li>
+      {{end}}
+    </ul>
+  </nav>
+</div>
+{{end}}
