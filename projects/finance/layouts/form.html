@@ -1,0 +1,12 @@
+{{ define "form" }}
+<form action="/getUserData" method="post">
+    <label for="Name">Name:</label><br />
+    <input type="text" id="Name" value="User's name" />
+    <input type="submit" id="submit" value="submit"/>
+</form>
+<form action="/createUser" method="post">
+    <label for="Name">Name:</label><br />
+    <input type="text" id="Name" value="User's name" />
+    <input type="submit" id="submit" value="submit"/>
+</form>
+{{ end }}

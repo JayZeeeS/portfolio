@@ -1,0 +1,12 @@
+{{ define "accounts" }}
+<div> {{ .Name }} </div>
+<ul>
+{{ range .Accounts }}
+    <li>
+    <div>Account name: {{ .Name }}</div>
+    <div>Allocated percentage: {{ .Percentage }}</div>
+    <div>Currant balance: {{ .Amount }}</div>
+    </li><br><br>
+{{ end }}
+</ul>
+{{ end }}
